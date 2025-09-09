@@ -1,0 +1,153 @@
+Role:
+You are an expert full-stack developer & AI/ML engineer tasked to build a production-ready biodiversity analytics platform that processes eDNA datasets and provides real-time, predictive, and community-driven insights for marine ecosystem conservation.
+
+🔑 Core Features to Implement
+
+Real-Time Biodiversity Hotspot Mapping
+
+Upload eDNA samples and geotag results on an interactive map (Leaflet/Mapbox/Google Maps API).
+
+Visualization of species diversity at each location with heatmaps, charts, and filters.
+
+Allow dynamic exploration of species variety across regions.
+
+Endangered & Invasive Species Alert System
+
+Integrate with IUCN Red List API / custom registry DB.
+
+After DNA analysis, trigger alerts:
+
+🔴 Endangered species detected!
+
+🟠 Invasive species detected!
+
+Display via dashboard alerts + email/SMS notifications.
+
+AI-Powered Predictive Analytics
+
+Train ML models using:
+
+Past eDNA datasets
+
+Environmental factors (temperature, salinity, pH, etc.).
+
+Predict biodiversity trends (e.g., “plankton decline → fish diversity may drop”).
+
+Show results as graphs + time-series charts.
+
+Models: LSTM/GRU for time-series, Random Forest/XGBoost for correlations.
+
+Citizen Science Integration
+
+Build a mobile-friendly lite app (React Native / PWA).
+
+Allow fishermen, scuba divers, students to:
+
+Upload water sample data + images + location.
+
+Backend should process their contributions like research datasets.
+
+Gamify participation (leaderboards, badges).
+
+🏗️ Tech Stack & Architecture
+Frontend
+
+React.js / Next.js for web dashboard
+
+React Native / PWA for citizen science mobile app
+
+TailwindCSS + D3.js/Recharts for responsive data visualization
+
+Map Integration: Mapbox GL JS or Leaflet
+
+Backend
+
+FastAPI / Flask (Python) for API endpoints
+
+Microservices architecture (Dockerized)
+
+Endpoints:
+
+/upload-sample → DNA file ingestion
+
+/analyze-sample → DNA preprocessing + ML pipeline
+
+/map-data → biodiversity hotspot geodata
+
+/alerts → endangered/invasive detection
+
+/predict → AI trend predictions
+
+Database
+
+PostgreSQL + PostGIS for geospatial biodiversity data
+
+MongoDB (optional) for unstructured metadata (citizen uploads)
+
+Redis for caching map queries and alerts
+
+SQLAlchemy ORM
+
+AI/ML Integration
+
+DNA Preprocessing: K-mer analysis, BLAST-style lightweight search
+
+Species Identification: Trained classification model
+
+Predictive Trends:
+
+Time-series forecasting (LSTM/Prophet)
+
+Feature correlation models (Random Forest/XGBoost)
+
+Model Deployment:
+
+Serve via FastAPI ML microservice
+
+Use scikit-learn, TensorFlow, or PyTorch
+
+DevOps & Infra
+
+Docker + Docker Compose for containerized deployment
+
+Nginx reverse proxy
+
+CI/CD with GitHub Actions
+
+Scalability: Kubernetes-ready architecture
+
+📊 Visualizations & UI Requirements
+
+Dashboard:
+
+Upload panel → run pipeline
+
+Hotspot map with biodiversity layers
+
+Alerts (endangered/invasive species)
+
+Predictive trend graphs (line charts, bar plots, time series)
+
+Citizen Science Mobile App:
+
+Simple “Upload Sample” form with photo + GPS location
+
+Gamified leaderboard
+
+Access to simplified biodiversity maps
+
+⚡ Deliverables
+
+Full frontend + backend + database + ML integration
+
+RESTful APIs + GraphQL (optional)
+
+Dockerized deployment
+
+Pre-trained ML models + sample dataset ingestion
+
+Interactive map-based visualization
+
+Alerting system tied to species registry
+
+👉 Instruction: Generate complete production-grade code (frontend + backend + database schema + ML pipeline + Docker setup) based on the above requirements. Ensure modular, scalable, and well-documented implementation.
